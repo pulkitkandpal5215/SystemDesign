@@ -37,8 +37,8 @@ int main() {
     cinema.addScreen(screen1);
 
     // Movies
-    Movie movie1("3 Idiots", "Hindi", 170);
-    Movie movie2("Interstellar", "English", 169);
+    Movie movie1("The Legends", "English", 170);
+    Movie movie2("Hanuman", "Hindi", 159);
 
     // Shows
     Show show1(
