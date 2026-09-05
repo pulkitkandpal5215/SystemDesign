@@ -1,18 +1,26 @@
-#include<vector>
-#include<string>
-#include "Seat.cpp"
+#include <iostream>
+#include <vector>
 using namespace std;
 
-class Screen{
-    private:
-        int screenNumber;
-        vector<Seat> seat;
-    public:
-    Screen();
-    Screen(int screenNumber){
-        this->screenNumber=screenNumber;
+class Screen {
+private:
+    int screenNumber;
+    vector<Seat> seats;
+
+public:
+    Screen(int n) {
+        screenNumber = n;
     }
-    void addSeat(Seat seat){}
-    void showSeats(){}
-    Seat getSeat(string number){}
+
+    void addSeat(Seat seat) {
+        seats.push_back(seat);
+    }
+
+    int getScreenNumber() {
+        return screenNumber;
+    }
+
+    vector<Seat>& getSeats() {
+        return seats;
+    }
 };

@@ -1,17 +1,35 @@
-#include<string>
+#include <iostream>
+#include <string>
 using namespace std;
 
-class ShowSeats{
-    private:
-    Seat* seats;
+class ShowSeat {
+private:
+    Seat* seat;
     string status;
-    
-    public:
-    ShowSeats(Seat* seats){
-        this->seats=seats;
+
+public:
+    ShowSeat(Seat* s) {
+        seat = s;
+        status = "AVAILABLE";
     }
-    bool isAvailable(){}
-    void book(){}
-    void release(){}
-    string getStaus(){}
+
+    Seat* getSeat() {
+        return seat;
+    }
+
+    bool isAvailable() {
+        return status == "AVAILABLE";
+    }
+
+    string getStatus() {
+        return status;
+    }
+
+    void book() {
+        status = "BOOKED";
+    }
+
+    void release() {
+        status = "AVAILABLE";
+    }
 };
